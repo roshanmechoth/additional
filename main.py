@@ -17,8 +17,7 @@ from fastapi.responses import JSONResponse
 from starlette.exceptions import HTTPException as StarletteHTTPException
 from common.messages import Messages
 from common.utilities import delete_422_response
-from repository import models
-from repository.database import sessionmaker,engine
+
 from routers.additional import additional_router
 
 from starlette.middleware.sessions import SessionMiddleware

@@ -2,15 +2,12 @@ import traceback
 from fastapi.exceptions import HTTPException
 from common.app_response import AppResponse
 from common.messages import Messages
-from repository.database import Session, engine,get_db
 from common.app_response import AppResponse
 from common.messages import Messages
 from fastapi.encoders import jsonable_encoder
-from repository.database import get_db
-from repository.models import *
 from math import radians, sin, cos, sqrt, atan2
 
-session = get_db()
+
 def delete_422_response(data):
     for method in data:
         try:

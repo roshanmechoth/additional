@@ -4,8 +4,7 @@ auth_scheme = HTTPBearer()
 from fastapi import APIRouter, Request,Depends,Query
 from fastapi.responses import JSONResponse
 from repository.models import *
-from repository.database import get_db
-session = get_db()
+
 from services.additional_manager import *
 additional_router = APIRouter(
     prefix='/add'
